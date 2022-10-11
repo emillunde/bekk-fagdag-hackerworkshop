@@ -10,7 +10,7 @@
 
 ## Oppgaver
 
-### Bryt deg inn på wifi-nettverket HackMe
+### Bryt deg inn på wifi-nettverket
 Utnytt svakhetene i WPS vha. [OneShot](https://github.com/drygdryg/OneShot) til å skaffe deg passordet til nettverket.
 
 <details><summary>Løsningsforslag</summary>
