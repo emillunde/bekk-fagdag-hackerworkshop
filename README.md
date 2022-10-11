@@ -37,12 +37,29 @@ sudo nmap -A 192.168.38.0-100
 ### Finn ut så mye som mulig om serveren(e)
 Etter at man har kartlagt hva som er tilgjengelig i nettverket er neste steg å finne ut enda mer om de mest interessante delene. Typisk er dette servere man kan kommunisere med via HTTP, SSH eller andre kjente protokoller. 
 
+<details><summary>Hint 1</summary>
+
 Denne oppgaven er ganske åpen og kan løses på mange måter. Ofte er det lurt å gå bredt ut til å begynne med og snevre inn hva man undersøker etterhvert som man skaffer seg mer informasjon. Noen typiske spørsmål man kan prøve å besvare er:
 - Hva er det sannsynlig at serveren brukes til?
 - Inneholder den noe interessant?
 - Hva slags teknologi er i bruk?
 - Hvilke versjoner av teknologien brukes?
 - Har disse versjonene noen kjente sårbarheter?
+
+</details>
+
+<details><summary>Hint 2</summary>
+
+- gobuster kan brukes til å lete etter innhold på en webserver.
+- Hvilke filer som lastes og hvilke headere som returneres kan gi mye informasjon om hvilken teknologi som er i bruk. Wappalyzer er også en nyttig addon/extension man kan installere i nettleseren som lister opp den underliggende teknologien.
+
+</details>
+
+<details><summary>Hint 3</summary>
+
+Kali har et verktøy som heter wpscan som kan gi deg mye informasjon om en Wordpress-server. Ev. kan man bruke en scanner i Metasploit. Tips til bruk av Metasploit finner du i neste oppgave.
+
+</details>
 
 ### Skaff deg tilgang til serveren
 
