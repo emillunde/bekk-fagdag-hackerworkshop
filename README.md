@@ -11,21 +11,25 @@
 ## Oppgaver
 
 ### Bryt deg inn på wifi-nettverket HackMe
+Utnytt svakhetene i WPS vha. [OneShot](https://github.com/drygdryg/OneShot) til å skaffe deg passordet til nettverket.
 
-<details><summary>Løsning</summary>
-
+<details><summary>Løsningsforslag</summary>
+  
 ```
-sudo python oneshot.py -i wlan0 --bssid 34:21:09:24:10:D8 --pixie-dust
+sudo python oneshot.py -i wlan0 --pixie-dust
 ```
-
+Navnet på det trådløse grensesnittet finner du via iwconfig-kommandoen. OneShot vil liste ut nettverkene den finner med WPS aktivert. Velg nettverket kalt HackMe.
 </details>
 
 ### Kartlegg hva som fins på det lokale nettverket
+Finn ut hvilke enheter og porter som er tilgjengelige.
 
-<details><summary>Løsning</summary>
-
+<details><summary>Løsningsforslag</summary>
+Nmap kan brukes til å scanne et nettverk etter tilgjengelige enheter og åpne porter.
+  
 ```
-sudo nmap -A 192.168.38.0/24
+sudo nmap -A 192.168.38.0-100
+
 ```
 
 </details>
