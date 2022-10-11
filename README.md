@@ -34,7 +34,15 @@ sudo nmap -A 192.168.38.0-100
 
 </details>
 
-### Finn ut så mye som mulig om serveren på nettverket
+### Finn ut så mye som mulig om serveren(e)
+Etter at man har kartlagt hva som er tilgjengelig i nettverket er neste steg å finne ut enda mer om de mest interessante delene. Typisk er dette servere man kan kommunisere med via HTTP, SSH eller andre kjente protokoller. 
+
+Denne oppgaven er ganske åpen og kan løses på mange måter. Ofte er det lurt å gå bredt ut til å begynne med og snevre inn hva man undersøker etterhvert som man skaffer seg mer informasjon. Noen typiske spørsmål man kan prøve å besvare er:
+- Hva er det sannsynlig at serveren brukes til?
+- Inneholder den noe interessant?
+- Hva slags teknologi er i bruk?
+- Hvilke versjoner av teknologien brukes?
+- Har disse versjonene noen kjente sårbarheter?
 
 ### Skaff deg tilgang til serveren
 
