@@ -33,32 +33,35 @@ sudo nmap -A 192.168.38.0-100
 Nmap kan brukes til å scanne et nettverk etter tilgjengelige enheter og åpne porter.
 </details>
 
-### Finn ut så mye som mulig om serveren(e)
-Etter at man har kartlagt hva som er tilgjengelig i nettverket er neste steg å finne ut enda mer om de mest interessante delene. Typisk er dette servere man kan kommunisere med via HTTP, SSH eller andre kjente protokoller. 
+### Undersøk ut om det er noe interessant på en av webserverene
 
-Denne oppgaven er ganske åpen og kan løses på mange måter. Ofte er det lurt å gå bredt ut til å begynne med og snevre inn hva man undersøker etterhvert som man skaffer seg mer informasjon. Noen typiske spørsmål man kan prøve å besvare er:
-- Hva er det sannsynlig at serveren brukes til?
-- Inneholder den noe interessant?
-- Hva slags teknologi er i bruk?
-- Hvilke versjoner av teknologien brukes?
-- Har disse versjonene noen kjente sårbarheter?
+<details><summary>Hint</summary>
 
-<details><summary>Hint 1</summary>
-
-- `gobuster` kan brukes til å kartlegge hva en webserver inneholder ved å gi den en liste med vanlige mappe- og filnavn. For å ikke overbelaste serveren er det fint om du bruker en relativt kort ordliste, f.eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt). Et stort utvalg av diverse ordlister finner man [her](https://github.com/danielmiessler/SecLists).
+- `gobuster` kan brukes til å kartlegge hva en webserver inneholder ved å gi den en liste med mappe- og filnavn. For å ikke overbelaste serveren er det fint om du bruker en relativt kort ordliste, f.eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt). Et stort utvalg av diverse ordlister finner man [her](https://github.com/danielmiessler/SecLists).
   
   ```gobuster dir -u http://192.168.38.101:8000 -w common.txt```
-- Hvilke filer som lastes og hvilke headere som returneres kan gi mye informasjon om hvilken teknologi som er i bruk. Wappalyzer er også en nyttig addon/extension man kan installere i nettleseren som lister opp den underliggende teknologien.
 
 </details>
 
-<details><summary>Hint 2</summary>
-
-Kali har et verktøy som heter wpscan som kan gi deg mye informasjon om en Wordpress-server. Ev. kan man bruke en scanner i Metasploit. Tips til bruk av Metasploit finner du i neste oppgave.
+ ### Finn ut hva slags teknologi som er i bruk
+  
+<details><summary>Hint</summary>
+  
+Hvilke filer som lastes og hvilke headere som returneres kan gi mye informasjon om hvilken teknologi som er i bruk. Wappalyzer er også en nyttig addon/extension man kan installere i nettleseren som lister opp den underliggende teknologien.
 
 </details>
 
-### Skaff deg tilgang til serveren
+### Kjente sårbarheter?
+
+Når man vet hvilken teknologi som brukes er ofte neste steg å finne ut nøyaktig hvilke versjoner som brukes. Deretter kan man undersøke om det er kjente sårbarheter tilknyttet disse versjonene.
+
+<details><summary>Hint</summary>
+
+Kali har et verktøy kalt wpscan som kan gi deg mye informasjon om en Wordpress-server.
+
+</details>
+
+### Bryt deg inn på serveren
 
 ### Finn et flagg på serveren
 
