@@ -115,9 +115,7 @@ Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet wpscan.
 </details>
 
 <details><summary>Løsningsforslag</summary>
-Kjør kommandoen under. Fra resultatet ser vi at serveren kjører en sårbar versjon av pluginen <TODO>. 
-
-  TODO: Er det riktig kommando under?
+Kjør kommandoen under. Fra resultatet ser vi at serveren kjører en sårbar versjon av pluginen simple-file-list. 
   
 ```wpscan --url http://192.168.38.72:1337 ```
 
