@@ -100,6 +100,8 @@ Her finnes det flere måter man kan konkludere med at webserveren kjører en wor
   
 Ved hjelp av gobuster kan vi også finne frem til siden (TODO TODO TODO TODO TODO TODO)
 
+</details> 
+ 
 </br>
 
 ### Kjente sårbarheter?
