@@ -1,5 +1,7 @@
 # Hackerworkshop Bekk Fagdag 21.10.2022
 
+I denne workshopen skal du bryte deg inn på en ruter, kartlegge nettverket, finne sårbarheter i en webserver og skaffe deg tilgang til serveren og dens database.
+
 ## Engasjementsregler
 
 - Det er bare tillatt å angripe wifi-nettverket kalt HackMe og enheter tilknyttet ruterens lokale nettverk på `192.168.38.0/24`.
