@@ -86,7 +86,7 @@ Ved å se at port 8080 er åpen, kan vi anta at serveren svarer på https-trafik
 Om dere ønsker, kan dere også bruke wappalyzer-utvidelsen i nettleseren for å undersøke nærmere. 
 </details>
  
-b) Se etter skjulte ressurser på serveren ved hjelp av verktøyet `gobuster`. Bruk gjerne en kort ordliste, f. eks. [denne]() for å unngå å overbelaste serveren. 
+b) Se etter skjulte ressurser på serveren ved hjelp av verktøyet `gobuster`. Bruk gjerne en kort ordliste, f. eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt) for å unngå å overbelaste serveren. 
 
 <details><summary>Hint 1</summary>
 Last ned ordlisten og kjør kommandoen under. Ser dere noen interessante funn?
@@ -104,13 +104,21 @@ Ved hjelp av gobuster kan vi også finne frem til siden (TODO TODO TODO TODO TOD
  
 </br>
 
-### Kjente sårbarheter?
+### 4. Kjente sårbarheter?
 
-Når man vet hvilken teknologi som brukes er ofte neste steg å finne ut nøyaktig hvilke versjoner som brukes. Deretter kan man undersøke om det er kjente sårbarheter tilknyttet disse versjonene.
+Nå som dere har funnet ut hvilke teknologier som brukes, er neste steg å finne ut nøyaktig hvilke versjoner som kjører, og om de har noen kjente sårbarheter. Se om dere finner noe sårbart som kjører på serveren!
 
-<details><summary>Hint</summary>
+<details><summary>Hint 1</summary>
 
-Kali har et verktøy kalt wpscan som kan gi deg mye informasjon om en Wordpress-server.
+Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet wpscan. Dette verktøyet er allerede installert på kali linux, og brukes til å scanne blant annet sårbare versjoner, plugins og themes i tillegg til feilkonfigurasjoner.
+
+</details>
+
+<details><summary>Løsningsforslag</summary>
+Kjør kommandoen under. Fra resultatet ser vi at serveren kjører en sårbar versjon av pluginen <TODO>. 
+
+``` todo ```
+
 
 </details>
 
