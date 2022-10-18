@@ -98,7 +98,7 @@ Last ned ordlisten og kjør kommandoen under. Ser dere noen interessante funn?
 
 Her finnes det flere måter man kan konkludere med at webserveren kjører en wordpress-instans. Man kan feks åpne http://192.168.38.72 i en browser, og se at "Powered by wordpress" pryder footeren på siden. 
   
-Ved hjelp av gobuster kan vi også finne frem til siden (TODO TODO TODO TODO TODO TODO)
+Ved hjelp av gobuster kan vi også finne frem til siden (TODO: Hvilken side var det de kunne finne her?). Om dere fant denne, fikk dere også et flagg. Yay!
 
 </details> 
  
@@ -117,15 +117,23 @@ Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet wpscan.
 <details><summary>Løsningsforslag</summary>
 Kjør kommandoen under. Fra resultatet ser vi at serveren kjører en sårbar versjon av pluginen <TODO>. 
 
-``` todo ```
-
+  TODO: Er det riktig kommando under?
+  
+```wpscan --url http://192.168.38.72:1337 ```
 
 </details>
+</br>
 
-### Bryt deg inn på serveren
+### 5. Bryt deg inn på serveren
 
-### Finn et flagg på serveren
 
-### Skaff deg tilgang til databasen
+</br>
+### 6. Finn et flagg på serveren
 
-### Finn et flagg i databasen
+
+</br>
+### 7. Skaff deg tilgang til databasen
+
+
+</br>
+### 8. Finn et flagg i databasen
