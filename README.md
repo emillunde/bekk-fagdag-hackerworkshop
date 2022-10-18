@@ -13,7 +13,9 @@ I denne workshopen skal du bryte deg inn på en ruter, kartlegge nettverket, fin
 ## Oppgaver
 
 ### 1. Bryt deg inn på wifi-nettverket
-Utnytt svakhetene i WPS vha. [OneShot](https://github.com/drygdryg/OneShot) til å skaffe deg passordet til nettverket. Repoet er allerede klonet på maskinen og ligger på rot-nivå. 
+Routeren vi har satt opp bruker en sårbar implementasjon av WPS-protokollen. Ved hjelp av [OneShot](https://github.com/drygdryg/OneShot) kan vi utnytte det! 
+
+**Bruk Oneshot og pixiedust til å finne passordet til HackMe-nettverket. Repoet er allerede klonet og klart på maskinen! **
 
 <details>
 <summary>Hint 1</summary>
@@ -74,7 +76,7 @@ Kjør nmap med `-A`flagget for å vise mer informasjon om her host.
 ### 3. Grav dypere!
 Velg dere ut det funnet fra forrige oppgave dere tenker er mest interessant å se videre på. Dere skal nå forsøke å lære litt mer om denne enheten, i jakten på en angrepsvinkel.
 
-a) Finn ut hvilke teknologier som er i bruk på serveren
+**a) Finn ut hvilke teknologier som er i bruk på serveren**
 
 <details><summary>Hint 1</summary>
 Også her er nmap et fint verktøy. Hvilke porter er åpne? Svarer serveren på http/https-trafikk? 
@@ -86,7 +88,7 @@ Ved å se at port 8080 er åpen, kan vi anta at serveren svarer på https-trafik
 Om dere ønsker, kan dere også bruke wappalyzer-utvidelsen i nettleseren for å undersøke nærmere. 
 </details>
  
-b) Se etter skjulte ressurser på serveren ved hjelp av verktøyet `gobuster`. Bruk gjerne en kort ordliste, f. eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt) for å unngå å overbelaste serveren. 
+**b) Se etter skjulte ressurser på serveren ved hjelp av verktøyet `gobuster`. Bruk gjerne en kort ordliste, f. eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt) for å unngå å overbelaste serveren. **
 
 <details><summary>Hint 1</summary>
 Last ned ordlisten og kjør kommandoen under. Ser dere noen interessante funn?
@@ -106,11 +108,13 @@ Ved hjelp av gobuster kan vi også finne frem til siden (TODO: Hvilken side var 
 
 ### 4. Kjente sårbarheter?
 
-Nå som dere har funnet ut hvilke teknologier som brukes, er neste steg å finne ut nøyaktig hvilke versjoner som kjører, og om de har noen kjente sårbarheter. Se om dere finner noe sårbart som kjører på serveren!
+Nå som dere har funnet ut hvilke teknologier som brukes, er neste steg å finne ut nøyaktig hvilke versjoner som kjører, og om de har noen kjente sårbarheter. 
+</br></br>
+**Se om dere finner noe sårbart som kjører på serveren!**
 
 <details><summary>Hint 1</summary>
 
-Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet wpscan. Dette verktøyet er allerede installert på kali linux, og brukes til å scanne blant annet sårbare versjoner, plugins og themes i tillegg til feilkonfigurasjoner.
+Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet `wpscan`. Dette verktøyet er allerede installert på kali linux, og brukes til å scanne blant annet sårbare versjoner, plugins og themes i tillegg til feilkonfigurasjoner.
 
 </details>
 
@@ -122,16 +126,51 @@ Kjør kommandoen under. Fra resultatet ser vi at serveren kjører en sårbar ver
 </details>
 </br>
 
-### 5. Bryt deg inn på serveren
+### 5. Exploit time!
+Nå som vi er ferdig med kartlegging av målet, er det på tide å dra frem storskytsen! Vi har funnet et mål, kartlagt teknologien og funnet en sårbarhet vi kan bruke som inngang. 
+</br> </br>
+**Bruk metasploit til å skaffe dere et shell på serveren.**
 
+<details><summary>Hint 1</summary>
+  
+For å starte metasploit (metasploit framework console) kjører dere kommandoen `msfconsole`. Inne i metasploit-konsollen kan dere bruke kommandoen `search` for å lete etter en konkret exploit. 
+</details>
+
+<details><summary>Hint 2</summary>
+  
+Exploiten dere trenger heter `exploit/multi/http/wp_simple_file_list_rce`. Last den ved å bruke `use`-kommandoen, og sett de nødvendige variablene før dere kjører `exploit`!
+</details>
+
+<details><summary>Hint 3</summary>
+
+Variablene som må settes er RHOST og RPORT, hhv. remote host og remote port. Bruk `set`-kommandoen og fyll de inn med IP og port dere fant tidligere.
+</details>
+
+<details><summary>Løsningsforslag</summary>
+</br>
+Kjør kommandoene under, så vil du forhåpentligvis få et shell på serveren!
+  
+```
+> msfconsole
+> use exploit/multi/http/wp_simple_file_list_rce
+> set RHOST 192.168.38.72
+> set RPORT 1337
+> exploit
+```  
+</details>
 
 </br>
-### 6. Finn et flagg på serveren
 
+### 6. Se dere rundt!
+Nå som vi har et shell på serveren, kan vi begynne å snoke rundt etter noe interessant (.. i dette tilfellet et flagg!). 
+</br></br>
+**Ta en runde på serveren, og se om dere finner noe som ligner et flagg.**
 
 </br>
+
 ### 7. Skaff deg tilgang til databasen
 
 
 </br>
+
 ### 8. Finn et flagg i databasen
