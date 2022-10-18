@@ -26,11 +26,9 @@ Navnet på det trådløse grensesnittet finner du via iwconfig-kommandoen. OneSh
 ### Kartlegg hva som fins på det lokale nettverket
 Finn ut hvilke enheter og porter som er tilgjengelige.
 
-<details><summary>Løsningsforslag</summary>
+<details><summary>Hint</summary>
   
-```
-sudo nmap -A 192.168.38.0-100
-```
+`nmap` er din venn.
 
 Nmap kan brukes til å scanne et nettverk etter tilgjengelige enheter og åpne porter.
 </details>
