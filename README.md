@@ -13,14 +13,31 @@ I denne workshopen skal du bryte deg inn på en ruter, kartlegge nettverket, fin
 ## Oppgaver
 
 ### Bryt deg inn på wifi-nettverket
-Utnytt svakhetene i WPS vha. [OneShot](https://github.com/drygdryg/OneShot) til å skaffe deg passordet til nettverket.
+Utnytt svakhetene i WPS vha. [OneShot](https://github.com/drygdryg/OneShot) til å skaffe deg passordet til nettverket. Repoet er allerede klonet på maskinen og ligger på rot-nivå. 
+
+<details>
+<summary>Hint 1</summary>
+Naviger til OneShot-repoet i en terminal og kjør oneshot.py med riktig options.
+</details>
+
+<details>
+<summary>Hint 2</summary>
+Dere må spesifisere riktig trådløst grensesnitt ved å bruke -i flagget. Trådløst grensesnitt kan du finne med kommandoen ```iwconfig```.
+</details>
+
+<details>
+<summary>Hint 3</summary>
+Om det tar lang tid, kan det hende dere har glemt å spesifisere hvilket angrep OneShot skal kjøre, ved å kjøre ```--pixie-dust```.
+</details>
 
 <details><summary>Løsningsforslag</summary>
   
 ```
 sudo python oneshot.py -i wlan0 --pixie-dust
 ```
-Navnet på det trådløse grensesnittet finner du via iwconfig-kommandoen. OneShot vil liste ut nettverkene den finner med WPS aktivert. Velg nettverket kalt HackMe.
+
+Velg nettverket HackMe.
+
 </details>
 
 ### Kartlegg hva som fins på det lokale nettverket
