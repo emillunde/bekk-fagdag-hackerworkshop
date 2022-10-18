@@ -71,25 +71,36 @@ Kjør nmap med `-A`flagget for å vise mer informasjon om her host.
 
 </br>
 
-### 3. Undersøk ut om det er noe interessant på en av webserverene
+### 3. Grav dypere!
+Velg dere ut det funnet fra forrige oppgave dere tenker er mest interessant å se videre på. Dere skal nå forsøke å lære litt mer om denne enheten, i jakten på en angrepsvinkel.
 
-<details><summary>Hint</summary>
+a) Finn ut hvilke teknologier som er i bruk på serveren
 
-- `gobuster` kan brukes til å kartlegge hva en webserver inneholder ved å gi den en liste med mappe- og filnavn. For å ikke overbelaste serveren er det fint om du bruker en relativt kort ordliste, f.eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt). Et stort utvalg av diverse ordlister finner man [her](https://github.com/danielmiessler/SecLists).
-  
-  ```gobuster dir -u http://192.168.38.101:8000 -w common.txt```
-
+<details><summary>Hint 1</summary>
+Også her er nmap et fint verktøy. Hvilke porter er åpne? Svarer serveren på http/https-trafikk? 
 </details>
+
+<details><summary>Hint 2</summary>
+Ved å se at port 8080 er åpen, kan vi anta at serveren svarer på https-trafikk. Om dere åpner IP-adressen i en browser får dere nok et hint! 
+
+Om dere ønsker, kan dere også bruke wappalyzer-utvidelsen i nettleseren for å undersøke nærmere. 
+</details>
+ 
+b) Se etter skjulte ressurser på serveren ved hjelp av verktøyet `gobuster`. Bruk gjerne en kort ordliste, f. eks. [denne]() for å unngå å overbelaste serveren. 
+
+<details><summary>Hint 1</summary>
+Last ned ordlisten og kjør kommandoen under. Ser dere noen interessante funn?
+
+```gobuster dir -u http://192.168.38.72:1337 -w common.txt```
+</details>
+
+<details><summary>Løsningsforslag</summary>
+
+Her finnes det flere måter man kan konkludere med at webserveren kjører en wordpress-instans. Man kan feks åpne http://192.168.38.72 i en browser, og se at "Powered by wordpress" pryder footeren på siden. 
+  
+Ved hjelp av gobuster kan vi også finne frem til siden (TODO TODO TODO TODO TODO TODO)
 
 </br>
-
- ### 4. Finn ut hva slags teknologi som er i bruk
-  
-<details><summary>Hint</summary>
-  
-Hvilke filer som lastes og hvilke headere som returneres kan gi mye informasjon om hvilken teknologi som er i bruk. Wappalyzer er også en nyttig addon/extension man kan installere i nettleseren som lister opp den underliggende teknologien.
-
-</details>
 
 ### Kjente sårbarheter?
 
