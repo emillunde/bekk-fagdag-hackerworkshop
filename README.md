@@ -27,9 +27,6 @@ Navnet på det trådløse grensesnittet finner du via iwconfig-kommandoen. OneSh
 Finn ut hvilke enheter og porter som er tilgjengelige.
 
 <details><summary>Hint</summary>
-  
-`nmap` er din venn.
-
 Nmap kan brukes til å scanne et nettverk etter tilgjengelige enheter og åpne porter.
 </details>
 
