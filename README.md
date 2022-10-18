@@ -12,7 +12,7 @@ I denne workshopen skal du bryte deg inn på en ruter, kartlegge nettverket, fin
 
 ## Oppgaver
 
-### Bryt deg inn på wifi-nettverket
+### 1. Bryt deg inn på wifi-nettverket
 Utnytt svakhetene i WPS vha. [OneShot](https://github.com/drygdryg/OneShot) til å skaffe deg passordet til nettverket. Repoet er allerede klonet på maskinen og ligger på rot-nivå. 
 
 <details>
@@ -22,32 +22,56 @@ Naviger til OneShot-repoet i en terminal og kjør oneshot.py med riktig options.
 
 <details>
 <summary>Hint 2</summary>
-Dere må spesifisere riktig trådløst grensesnitt ved å bruke -i flagget. Trådløst grensesnitt kan du finne med kommandoen ```iwconfig```.
+
+Dere må spesifisere riktig trådløst grensesnitt ved å bruke `-i` flagget. Trådløst grensesnitt kan du finne med kommandoen `iwconfig`.
+  
 </details>
 
 <details>
 <summary>Hint 3</summary>
-Om det tar lang tid, kan det hende dere har glemt å spesifisere hvilket angrep OneShot skal kjøre, ved å kjøre ```--pixie-dust```.
+  
+Om det tar lang tid, kan det hende dere har glemt å spesifisere hvilket angrep OneShot skal kjøre, ved å kjøre `--pixie-dust`.
 </details>
 
 <details><summary>Løsningsforslag</summary>
+Kjør kommandoen under, og velg nettverket HackMe.
   
 ```
 sudo python oneshot.py -i wlan0 --pixie-dust
 ```
 
-Velg nettverket HackMe.
+</details>
+
+</br>
+
+### 2. Kartlegging
+Nå som dere er koblet til nettverket, skal dere finne ut hvilke enheter og hvilke åpne porter som er tilgjengelige. 
+Noter eventuelle interessante funn.
+
+<details><summary>Hint 1</summary>
+
+Her kan dere bruke verktøyet `nmap` til å scanne nettverket. Bruk `man nmap` for å se hvilke options dere kan gi til nmap.
 
 </details>
 
-### Kartlegg hva som fins på det lokale nettverket
-Finn ut hvilke enheter og porter som er tilgjengelige.
+<details><summary>Hint 2</summary>
 
-<details><summary>Hint</summary>
-Nmap kan brukes til å scanne et nettverk etter tilgjengelige enheter og åpne porter.
+Enheter som ligger i IP-rangen `192.168.38.100 - 192.168.38.255` er dere selv og andre deltakere i workshopen.
+
 </details>
 
-### Undersøk ut om det er noe interessant på en av webserverene
+<details><summary>Løsningsforslag</summary>
+
+Kjør nmap med `-A`flagget for å vise mer informasjon om her host.
+  
+```sudo nmap -A 192.168.38.0-100```
+  
+</details>
+
+
+</br>
+
+### 3. Undersøk ut om det er noe interessant på en av webserverene
 
 <details><summary>Hint</summary>
 
@@ -57,7 +81,9 @@ Nmap kan brukes til å scanne et nettverk etter tilgjengelige enheter og åpne p
 
 </details>
 
- ### Finn ut hva slags teknologi som er i bruk
+</br>
+
+ ### 4. Finn ut hva slags teknologi som er i bruk
   
 <details><summary>Hint</summary>
   
