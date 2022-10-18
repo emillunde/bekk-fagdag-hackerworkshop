@@ -173,11 +173,21 @@ Nå som vi har et shell på serveren, kan vi begynne å snoke rundt etter noe in
 </br></br>
 **Ta en runde på serveren, og se om dere finner noe som ligner et flagg.**
 
+<details><summary>Hint 1</summary>
+  TODO
+</details>
+
+
+<details><summary>Hint 2</summary>
+  TODO
+</details>
+
+
+<details><summary>Løsningsforslag</summary>
+  TODO
+</details>
+
 </br>
 
-### 7. Skaff deg tilgang til databasen
+### 7. Kom dere inn i databasen!
 
-
-</br>
-
-### 8. Finn et flagg i databasen
