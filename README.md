@@ -79,11 +79,11 @@ Velg dere ut det funnet fra forrige oppgave dere tenker er mest interessant å s
 **a) Finn ut hvilke teknologier som er i bruk på serveren**
 
 <details><summary>Hint 1</summary>
-Også her er nmap et fint verktøy. Hvilke porter er åpne? Svarer serveren på http/https-trafikk? 
+Også her er nmap et fint verktøy. Hvilke porter er åpne?
 </details>
 
 <details><summary>Hint 2</summary>
-Ved å se at port 8080 er åpen, kan vi anta at serveren svarer på https-trafikk. Om dere åpner IP-adressen i en browser får dere nok et hint! 
+nma viser at port 1337 er åpen. Hva skjer om dere åpner 192.168.38.72:1337 i nettleseren?
 
 Om dere ønsker, kan dere også bruke wappalyzer-utvidelsen i nettleseren for å undersøke nærmere. 
 </details>
@@ -98,7 +98,7 @@ Last ned ordlisten og kjør kommandoen under. Ser dere noen interessante funn?
 
 <details><summary>Løsningsforslag</summary>
 
-Her finnes det flere måter man kan konkludere med at webserveren kjører en wordpress-instans. Man kan feks åpne http://192.168.38.72 i en browser, og se at "Powered by wordpress" pryder footeren på siden. 
+Her finnes det flere måter man kan konkludere med at webserveren kjører en wordpress-instans. Man kan feks åpne http://192.168.38.72:1337 i en browser, og se at "Powered by wordpress" pryder footeren på siden. 
   
 Ved hjelp av gobuster kan vi også finne frem til siden (TODO: Hvilken side var det de kunne finne her?). Om dere fant denne, fikk dere også et flagg. Yay!
 
