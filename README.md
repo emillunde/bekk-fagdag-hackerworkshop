@@ -15,7 +15,7 @@ I denne workshopen skal du bryte deg inn på en ruter, kartlegge nettverket, fin
 ### 1. Bryt deg inn på wifi-nettverket
 Routeren vi har satt opp bruker en sårbar implementasjon av WPS-protokollen. Ved hjelp av [OneShot](https://github.com/drygdryg/OneShot) kan vi utnytte det! 
 
-**Bruk Oneshot og pixiedust til å finne passordet til HackMe-nettverket. Repoet er allerede klonet og klart på maskinen! **
+**Bruk Oneshot og pixiedust til å finne passordet til HackMe-nettverket. Repoet er allerede klonet og klart på maskinen!**
 
 <details>
 <summary>Hint 1</summary>
