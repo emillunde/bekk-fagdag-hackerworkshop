@@ -138,7 +138,7 @@ For å starte metasploit (metasploit framework console) kjører dere kommandoen 
 
 <details><summary>Hint 2</summary>
   
-Exploiten dere trenger heter `exploit/multi/http/wp_simple_file_list_rce`. Last den ved å bruke `use`-kommandoen, og sett de nødvendige variablene før dere kjører `exploit`!
+Exploiten dere trenger heter `exploit/multi/http/wp_simple_file_list_rce`. Last den inn ved å bruke `use`-kommandoen. `options`-kommandoen er nyttig for å se hvilke variabler som må settes før exploiten kjøres. 
 </details>
 
 <details><summary>Hint 3</summary>
