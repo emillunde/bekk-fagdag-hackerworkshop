@@ -88,7 +88,7 @@ Ved å se at port 8080 er åpen, kan vi anta at serveren svarer på https-trafik
 Om dere ønsker, kan dere også bruke wappalyzer-utvidelsen i nettleseren for å undersøke nærmere. 
 </details>
  
-**b) Se etter skjulte ressurser på serveren ved hjelp av verktøyet `gobuster`. Bruk gjerne en kort ordliste, f. eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt) for å unngå å overbelaste serveren. **
+b) **Se etter skjulte ressurser på serveren ved hjelp av verktøyet `gobuster`. Bruk gjerne en kort ordliste, f. eks. [denne](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt) for å unngå å overbelaste serveren.**
 
 <details><summary>Hint 1</summary>
 Last ned ordlisten og kjør kommandoen under. Ser dere noen interessante funn?
