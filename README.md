@@ -114,7 +114,7 @@ Nå som dere har funnet ut hvilke teknologier som brukes, er neste steg å finne
 
 <details><summary>Hint 1</summary>
 
-Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet `wpscan`. Dette verktøyet er allerede installert på kali linux, og brukes til å scanne blant annet sårbare versjoner, plugins og themes i tillegg til feilkonfigurasjoner.
+Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet `wpscan`. Dette verktøyet er allerede installert på Kali linux, og brukes til å scanne blant annet sårbare versjoner, plugins og themes i tillegg til feilkonfigurasjoner.
 
 </details>
 
@@ -213,16 +213,16 @@ Du kan bruke `portfwd` i meterpreter til å sette opp port forwarding.
 Første steg er å sette opp port forwarding fra webserveren til databasen.
 
 ```
-portfwd add -p 3306 -r 172.31.0.2 -l 3306
+portfwd add -p 3306 -r db -l 3306
 ```
 
-Da videresendes trafikken mot localhost:3306 til 172.31.0.2:3306 via webserveren. Nå kan vi åpne et nytt vindu i Kali og koble oss til databasen.
+Da videresendes trafikken mot localhost:3306 til db:3306 via webserveren. Nå kan vi åpne et nytt vindu i Kali og koble oss til databasen.
 
 ```
 mysql -h localhost --port 3306 --user=wordpress --password=<flagget_fra_forrige_oppgave> wordpress
 ```
 
-Nå gjenstår det bare å finne flagget!
+Nå gjenstår det bare å finne det siste flagget!
 
 </details>
 
