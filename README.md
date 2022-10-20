@@ -52,7 +52,7 @@ Noter eventuelle interessante funn.
 
 <details><summary>Hint 1</summary>
 
-Her kan dere bruke verktøyet `nmap` til å scanne nettverket. Bruk `man nmap` for å se hvilke options dere kan gi til nmap.
+Her kan dere bruke verktøyet `nmap` til å scanne nettverket. Bruk `man nmap` for å se hvilke options dere kan gi til nmap. Vi har erfart at kjøring av nmap inne i docker gir varierende uttelling. Kjør derfor nmap fra vertsmaskinen. 
 
 </details>
 
