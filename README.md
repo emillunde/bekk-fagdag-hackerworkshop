@@ -121,7 +121,7 @@ Ettersom vi vet at dette er en wordpress-server, kan vi bruke verktøyet `wpscan
 <details><summary>Løsningsforslag</summary>
 Kjør kommandoen under. Fra resultatet ser vi at serveren kjører en sårbar versjon av pluginen simple-file-list. 
   
-```wpscan --url http://192.168.38.72:1337 ```
+```wpscan --url http://192.168.38.72:1337 --api-token <ditt_token> ```
 
 </details>
 </br>
@@ -179,7 +179,7 @@ Det kan være fristende å navigere rundt i filsystemet, men det vil være en bl
 
 
 <details><summary>Hint 2</summary>
-Hvor pleier man å gjemme hemmeligheter?
+Hvor er det ganske vanlig å legge databasepassord, API-nøkler og lignende?
 </details>
 
 <details><summary>Hint 3</summary>
