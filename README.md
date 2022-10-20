@@ -194,4 +194,23 @@ Flagget ligger i en miljøvariabel på serveren. Kjør følgende kommando: `prin
 </br>
 
 ### 7. Kom dere inn i databasen!
+Nå som vi har hoppet inn på en server er det mulig å finne andre enheter eller porter som ikke er direkte eksponert på nettverket, f.eks. databasen til webserveren. I forrige oppgave fant vi all informasjonen vi trenger for å koble til databasen. Finn ut hvordan du kobler deg til databasen via webserveren.
+
+details><summary>Løsningsforslag</summary>
+
+Første steg er å sette opp port forwarding fra webserveren til databasen.
+
+```
+portfwd add -p 3306 -r db -l 3306
+```
+
+Deretter åpner vi et nytt vindu i Kali og kobler oss til databasen.
+
+```
+mysql -h localhost --port 3306 --user=wordpress --password=<flagget_i_forrige_oppgave> wordpress
+```
+
+Metasploit gjør det enkelt å videresende trafikk mot en lokal port til databaseserveren. Nå som du har koblet deg til databasen gjenstår det bare å finne flagget
+
+</details>
 
