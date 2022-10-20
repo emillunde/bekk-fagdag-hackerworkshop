@@ -98,9 +98,9 @@ Last ned ordlisten og kjør kommandoen under. Ser dere noen interessante funn?
 
 <details><summary>Løsningsforslag</summary>
 
-Her finnes det flere måter man kan konkludere med at webserveren kjører en wordpress-instans. Man kan feks åpne http://192.168.38.72:1337 i en browser, og se at "Powered by wordpress" pryder footeren på siden. 
+a) Her finnes det flere måter man kan konkludere med at webserveren kjører en wordpress-instans. Man kan feks åpne http://192.168.38.72:1337 i en browser, og se at "Powered by wordpress" pryder footeren på siden. 
   
-Ved hjelp av gobuster kan vi også finne frem til siden (TODO: Hvilken side var det de kunne finne her?). Om dere fant denne, fikk dere også et flagg. Yay!
+b) Ved hjelp av gobuster kan vi også finne frem til siden `/secret` som redirecter til en fil. Om dere fant denne, fikk dere også et flagg. Yay!
 
 </details> 
  
