@@ -79,7 +79,7 @@ Velg dere ut det funnet fra forrige oppgave dere tenker er mest interessant å s
 **a) Finn ut hvilke teknologier som er i bruk på serveren**
 
 <details><summary>Hint 1</summary>
-Også her er nmap et fint verktøy. Hvilke porter er åpne?
+Også her er nmap et fint verktøy. Hvilke porter er åpne? Sier nmap noe om hvilke hva som kjører?
 </details>
 
 <details><summary>Hint 2</summary>
